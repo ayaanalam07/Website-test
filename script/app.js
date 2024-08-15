@@ -9,19 +9,15 @@ const logout = document.querySelector('#Logout')
 
 
 
-onAuthStateChanged ( auth, (user) => {
+onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
       console.log(uid);
-      const profileImgURL = showUrl(profileImg.files[0])
-
      
     } else {
      window.location="login.html"
     }
   });
-
-
   logout.addEventListener('click',()=>{
     signOut(auth).then(() => {
     window.location = 'login.html'

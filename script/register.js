@@ -22,21 +22,20 @@ const profileImg = document.querySelector('#profile-img');
         const profileImgURL = await showUrl(profileImg.files[0])
 
 
-        createUserWithEmailAndPassword(auth, email.value, password.value, profileImg.files[0] )
+        createUserWithEmailAndPassword(auth, email.value, password.value)
         .then(async(userCredential) => {
           console.log(userCredential)
-          
+          alert('You have sucessfully Registered')
+            window.location="login.html"
 
             try {
-              const docRef = await addDoc(collection(db, "default"), {
+              const docRef = await addDoc(collection(db, "users"), {
                 email: email.value,
                 firstname: firstname.value,
                 lastname: lastname.value,
                 profileImg:profileImgURL
               });
               console.log("Document written with ID: ", docRef.id);
-            alert('You have sucessfully Registered')
-            window.location="login.html"
             } catch (e) {
               console.error("Error adding document: ", e);
             }
