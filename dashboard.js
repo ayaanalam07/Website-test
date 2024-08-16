@@ -22,6 +22,7 @@ const uservalue ={
     const docRef = await addDoc(collection(db, "blog"), uservalue);
     arr.push(uservalue)
     console.log("Document written with ID: ", docRef.id);
+    renderData()
   } catch (e) {
     console.error("Error adding document: ", e);
   }
@@ -32,7 +33,11 @@ const uservalue ={
 const div = document.querySelector("#contBox")
 
 function renderData(){
-    arr.forEach((item)=>{
-    
-    })
+   arr.forEach((item)=>{
+    div.innerHTML += `
+    <h1 class="text-white">Title:${item.title}</h1>
+    <h1 class="text-white">Description:${item.description}</h1>
+
+    `
+   })
 }
