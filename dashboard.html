@@ -29,12 +29,8 @@
                 <a class="justify-between">
                   Profile
                 </a>
-               
               </li>
               <li><button id="Logout">Logout</button></li>
-              <li><a href="./dashboard.html" class="justify-between">
-                Dashboard
-              </a></li>
             </ul>
             <label class="swap swap-rotate">
               <!-- this hidden checkbox controls the state -->
@@ -66,11 +62,36 @@
 
 
 
+    <!-- Dashboard sectioln started -->
+         <h1 class="text-white text-xl mt-[3rem] m-[3rem]">Dashboard:</h1>
+    <!-- Dashboard sectioln started -->
+
+
+    <!-- input section started -->
+    <form id="form">
+      <div class="flex justify-center flex-wrap rounded">
+      <div class="bg-[#FFF6F6] px-5 pb-5 mt-[1rem] mb-[1rem] rounded-lg h-[17rem] w-[29rem] ">
+        <input type="text" placeholder="Type here" id="inputText" class="mt-5 mb-[1rem] input input-bordered w-full max-w-xs" />
+      <textarea
+      id="textareaText"
+      placeholder="Bio"
+      class="textarea textarea-bordered textarea-lg w-full max-w-xs"></textarea>
+      <div>
+        <button id="publishBtn" class="btn mt-2">Publish</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  <!-- input section started -->
+
+
+
+
     
 
 
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./dashboard.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
